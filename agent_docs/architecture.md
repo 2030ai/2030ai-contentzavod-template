@@ -2,13 +2,13 @@
 
 ## Обзор
 
-ContentZavod — генератор контента для Telegram, работающий через команды и скиллы Claude Code. Не требует отдельного приложения или зависимостей.
+ContentZavod — генератор контента для Telegram, работающий через project-local skills. Не требует отдельного приложения или зависимостей.
 
 ## Ключевые компоненты
 
-- **Скилл `authorstyle`** (`.claude/skills/authorstyle/SKILL.md`) — правила генерации текста в авторском стиле
-- **Скилл `contentpost`** (`.claude/skills/contentpost/SKILL.md`) — полный цикл: сбор идей → исследование → генерация (3 варианта) → изображение → публикация
-- **Команда `/contentpost`** (`.claude/commands/contentpost.md`) — точка входа
+- **Скилл `authorstyle`** (`.agents/skills/authorstyle/SKILL.md`) — правила генерации текста в авторском стиле
+- **Скилл `contentpost`** (`.agents/skills/contentpost/SKILL.md`) — полный цикл: сбор идей → исследование → генерация (3 варианта) → изображение → публикация
+- **Platform mirrors** — `.claude/skills/`, `.codex/skills/`, `.cursor/skills/` symlinks на `.agents/skills/`
 - **Описание голоса** (`style/voice.md`) — описание тона, аудитории, характерных черт
 - **Примеры стиля** (`style/examples/`) — образцы постов автора для имитации
 
