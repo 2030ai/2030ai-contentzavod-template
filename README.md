@@ -1,4 +1,4 @@
-# ContentZavod
+# 2030ai-contentzavod-template
 
 Генератор контента для Telegram-канала в авторском стиле. Забирает идеи из чата, исследует тему, генерирует посты с изображениями и публикует — всё через команды Claude Code.
 
@@ -44,14 +44,17 @@
    /contentpost
    ```
 
+Репозиторий переименовывается в `2030ai/2030ai-contentzavod-template`; старый slug `2030ai/contentzavod-template` остаётся только историческим redirect.
+
 ## Структура проекта
 
 ```
-├── .claude/
-│   ├── commands/contentpost.md     # Команда запуска
-│   └── skills/
-│       ├── authorstyle/            # Скилл генерации в авторском стиле
-│       └── contentpost/            # Скилл полного цикла публикации
+├── .agents/skills/                 # Canonical project-local skills
+│   ├── authorstyle/
+│   └── contentpost/
+├── .claude/skills/                 # Claude Code symlink mirrors
+├── .codex/skills/                  # Codex symlink mirrors
+├── .cursor/skills/                 # Cursor symlink mirrors
 ├── style/
 │   ├── voice.md                    # Описание голоса и стиля автора
 │   └── examples/                   # Примеры постов для имитации
@@ -63,11 +66,14 @@
 └── CLAUDE.md                       # Конфигурация Claude Code
 ```
 
-## Команды
+## Skills
 
-| Команда | Описание |
+| Skill | Описание |
 |---------|----------|
-| `/contentpost` | Забрать идеи из чата, сгенерировать посты и опубликовать |
+| `contentpost` | Забрать идеи из чата, сгенерировать посты и опубликовать |
+| `authorstyle` | Сгенерировать текст в авторском стиле без публикации |
+
+`/contentpost` приходит из skill-discovery, не из slash-command файлов.
 
 ## Как работает конвейер
 

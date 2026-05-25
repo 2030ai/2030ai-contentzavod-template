@@ -1,6 +1,8 @@
 ---
 name: contentpost
 description: Полный цикл генерации контента — забирает идеи из Telegram-чата идей, генерирует посты в авторском стиле с изображениями, публикует в чат контент-плана.
+when_to_use: "Use when the user asks to run the full ContentZavod pipeline: fetch Telegram content ideas, generate posts in the configured author style, attach or generate images, and publish to the content-plan chat."
+disable-model-invocation: true
 ---
 
 # Генерация постов из идей в Telegram
