@@ -1,0 +1,22 @@
+[project]
+name = "content-pipeline"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "edge-tts>=6.1",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+elevenlabs = ["elevenlabs>=2.0"]
+openai = ["openai>=1.0"]
+verify = ["openai-whisper>=20231117"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.4"]
+
+[tool.setuptools.package-dir]
+"pipeline" = "."
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pipeline*"]

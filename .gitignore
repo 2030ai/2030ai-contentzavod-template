@@ -65,15 +65,9 @@ $RECYCLE.BIN/
 .env.local
 .env.*.local
 
-# Состояние бота
-state/
-
-# Сгенерированный контент (сохраняем структуру через .gitkeep)
-output/**
-!output/.gitkeep
-!output/images/
-output/images/**
-!output/images/.gitkeep
+# Локальные MCP/IDE артефакты
+.mcp.json
+.playwright-mcp/
 
 # Временные файлы
 temp/
@@ -106,6 +100,7 @@ env/
 .tox/
 .coverage
 htmlcov/
+*.egg-info/
 
 # Node.js
 node_modules/
@@ -121,6 +116,23 @@ coverage/
 
 main # Если бинарник называется main
 luac.out
+
+# Generated content and heavy media
+content/**/*.mp4
+content/**/*.mov
+content/**/*.mp3
+content/**/*.wav
+content/**/*.m4a
+content/**/segments/
+content/**/audio/
+content/**/frames/
+content/**/work/*.png
+content/**/work/*_v.mp4
+content/**/work/*_pad.mp4
+content/**/work/*_ext.mp4
+content/**/work/concat*.mp4
+content/**/work/*.txt
+content/**/work/review/
 
 # Project-local skill source and mirrors are intentionally tracked:
 # .agents/skills/ (source)
