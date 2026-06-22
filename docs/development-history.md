@@ -4,6 +4,16 @@
 
 ## Записи
 
+### 2026-06-22 — Skill command-name metadata
+
+**Задача:** привести template skills к названиям, совпадающим со slash-командами.
+
+**Что сделано:**
+- Skills `/mk` и `/audit` нормализованы: `name`, description и H1 совпадают с командой.
+- Добавлены `agents/openai.yaml` с `display_name: "/command"`.
+
+**Проверка:** metadata-scan по публичным template/upstream skills показывает `issues 0`.
+
 ### 2026-06-02 — Публичный шаблон обучающего контент-завода
 
 **Задача:** перенести суть развитого приватного ContentZavod в публичный template repository.

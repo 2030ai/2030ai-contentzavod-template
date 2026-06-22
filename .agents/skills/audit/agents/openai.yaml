@@ -1,0 +1,9 @@
+name: audit
+display_name: "/audit"
+description: "/audit — Проведи полную ревизию проекта."
+short_description: "Проведи полную ревизию проекта."
+default_prompt: "Use /audit for this workflow."
+interface:
+  display_name: "/audit"
+  short_description: "Local project skill /audit"
+  default_prompt: "Use $audit for this local project workflow."
