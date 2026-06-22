@@ -1,0 +1,9 @@
+name: mk
+display_name: "/mk"
+description: "/mk — Создай новый мастер-класс."
+short_description: "Создай новый мастер-класс."
+default_prompt: "Use /mk for this workflow."
+interface:
+  display_name: "/mk"
+  short_description: "Local project skill /mk"
+  default_prompt: "Use $mk for this local project workflow."
